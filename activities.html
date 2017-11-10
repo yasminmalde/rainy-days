@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head> 
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+	<img id='rainyday-image' src='images/London.jpg'>
+
+	<header>
+		<h1>RainyDays</h1>
+		<ul>
+			<li><a href="rainydays.html">About</a></li>
+			<li><a href="exhibitions.html">Exhibitions + Events</a></li>
+			<li><a href="activities.html">Activities</a></li>
+		</ul>
+	</header>
+
+	<div class="container">
+		<div class="row">
+	        <div class="col-sm-6">
+	        	<h2>Bowling</h2>
+				<h3>Rowans, Finsbury Park</h3>
+				<p>A kitsch retro-style bowling alley with pool tables, arcades and sports screens, Rowans has stood the test of time. Even if you’re not a fan of bowling, there are plenty of other things you can do here including a karaoke booth and chilling by the bar. At weekends, the dance floor gets packed out while the DJs drop some classic tunes. Open late on Fridays/Saturdays, you can have decent night out without going <i>out</i> out.<br />
+				<i>Admission fees £1 except after 8pm Fridays and Saturdays where it's £3, bowling prices per person range between £4.50-£6</i>
+				</p>aphy, music and archival material.<br /> 
+				<i>£16 or £5 Young Barbican (aged 14-25)</i></p>
+	        </div>
+	        <div class="col-sm-6"><img class="resize" src="images/rowans.jpg"></div>
+	    </div>
+	    
+	    <div class="row">
+	        <div class="col-sm-6"><img class="resize" src="images/plonk.jpg"></div>
+	        	<div class="col-sm-6">
+	        	<h2>Crazy Golf</h2>
+				<h3>Plonk Golf, various London locations</h3>
+				<p>Found across London, Plonk takes you on a 9-hole glow in the dark miniature crazy golf adventure with mechanical parts and active volcanos! The UV neon colours and smoke machines transport you into another world. Set up alongside vintage video arcade games such as pinball, ping pong and radio car racing, these indoor activities will keep you putting for hours.<br />
+				<i>Dalston £12, Brixton (Duke of Edinburgh Pub) £12, London Fields (BYOB policy) £8, Battersea £6</i></p>
+	   	    </div>
+	    </div>
+
+	    <div class="row">
+	        <div class="col-sm-6">
+	        	<h2>Board Games</h2>
+				<h3>Draughts, Haggerston</h3>
+				<p>London’s first board game café with 600+ games, this place can keep you playing for hours. Whether you are looking to play solo or in groups, and whatever your game of choice, they will find the board for you together with a delicious board of charcuterie, mezze and cheeses. Snakes and ladders pros, scrabble word masters, battleship captains, and kerplunk marble maniacs, come here, challenge yourself and your friends to a healthy dose of competition.</p>
+	        </div>
+	        <div class="col-sm-6"><img class="resize" src="images/draughts.jpg"></div>
+	    </div>
+
+	    <div class="row">
+	        <div class="col-sm-6"><img class="resize" src="images/bounce.jpg"></div>
+	        <div class="col-sm-6">
+	        	<h2>Ping Pong</h2>
+				<h3>Bounce, Old Street/Farringdon</h3>
+				<p>Based in two locations in East Central London, Bounce has exceeded expectations by providing a whole new meaning to ping pong. It is a perfect way to get your heart rate going to especially build an appetite for their incredibly mouth-watering wood burning oven cooked pizzas and delectable cocktails. Covering 17 tables the venues have been so creatively designed for this exciting experience that you can enjoy with friends and strangers.</p>
+	        </div>
+	    </div>
+
+	    <div class="row">
+	        <div class="col-sm-6">
+	        		<h2>Plants</h2>
+				<h3>Barbican Conservatory</h3>
+				<p>Tired of cold and wet London, let the Conservatory takes you to the hot home of 2,000 tropical plants and breathe in that oxygen. Hidden in the heart of the Barbican centre, this oasis is the second largest conservatory in London where you can just immerse yourself in its beauty, observing a variety of plant species. Daily personal tours are also held by the resident gardeners where you can learn of its history and about the plants. </p>
+	        </div>
+	        <div class="col-sm-6"><img class="resize" src="images/barbican.jpg"></div>
+	    </div>
+	</div>
+
+	<div class="nav-center">
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="#" class="fa fa-facebook"></a>
+	</div>
+
+	<script src="bootstrap/js/boostrap.js"></script>
+	<script type="text/javascript" src='rainyday.js'></script>
+	<script src="jquery-3.2.1.min.js"></script>
+    
+    <script type="text/javascript">
+    	// A $( document ).ready() block.
+		$(document).ready(function() {
+		  var image = document.getElementById("rainyday-image");
+		  image.onload = function() {
+		    var engine = new RainyDay({
+		      image: image, // Image element
+		      // This value is required
+		      blur: 10, // Defines blur due to rain effect
+		      // Assuming 10 if not provided
+		      // Use 0 value to disable the blur
+		      opacity: 1 // Opacity of rain drops
+		      // Assuming 1 if not provided
+		    });
+		    engine.rain(
+		      [
+		        [1, 0, 20], // add 20 drops of size 1...
+		        [3, 3, 1] // ... and 1 drop of size from 3 - 6 ...
+		      ],
+		      100
+		    ); // ... every 100ms
+		  };
+		});
+		
+    </script>
+
+</body>
+</html>
