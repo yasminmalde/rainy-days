@@ -1,7 +1,8 @@
 html, body {margin:0; height: 100%;}
 
 #rainyday-image {
-	max-width: 100%;	
+	max-width: 100%;
+	position: relative;	
 }
 
 header {
@@ -9,8 +10,13 @@ header {
 }
 
 h1 {
+ 	font-family: 'Barrio', cursive;
  	font-size: 75px;
  	padding: 0 0 10px 0;
+ 	position: absolute;
+ 	top: 50px;
+ 	left: 200px;
+ 	width: 100%;
  }
 
 a {
@@ -26,6 +32,7 @@ li {
 	display: inline;
 	font-size: 20px;
 	padding: 0 30px 0 30px;
+	font-family: 'Barrio', cursive;
 }
 
 a:hover {

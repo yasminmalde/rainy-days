@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head> 
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+</head>
+
+<body>
+	<img id='rainyday-image' src='images/London.jpg'>
+
+	<header>
+		<h1>RainyDays</h1>
+		<ul>
+			<li><a href="rainydays.html">About</a></li>
+			<li><a href="exhibitions.html">Exhibitions + Events</a></li>
+			<li><a href="activities.html">Activities</a></li>
+		</ul>
+	</header>
+
+	<p>About rainy days</p>
+
+	<div id="carousel-home-page" class="carousel slide" data-ride="carousel">
+	<!--Indicators-->
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-home-page" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-home-page" data-slide-to="1"></li>
+	    <li data-target="#carousel-home-page" data-slide-to="2"></li>
+	  </ol>
+
+	<!--Wrapper for slides-->
+	  <div class="carousel-inner" role="listbox">
+	    <div class="item active">
+	      <img src="images/basquiatcarousel.jpg" alt="basquiat" style="width: 100%">
+	      <div class="carousel-caption">
+	        <h3>Basquiat: Boom for Real</h3>
+	      </div>
+	    </div>
+
+	    <div class="item">
+	      <img src="images/barbicanconservcarousel.jpg" alt="barbican" style="width: 100%">
+	      <div class="carousel-caption">
+	        <h3>Barbican Conservatory</h3>
+	      </div>
+	    </div>
+
+	     <div class="item">
+	      <img src="images/printworks2.jpg" alt="printworks" style="width: 100%">
+	      <div class="carousel-caption">
+	        <h3>Printworks</h3>
+	      </div>
+	    </div>
+
+	  </div>
+
+	<!--Controls-->
+	  <a class="left carousel-control" href="#carousel-home-page" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-home-page" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+
+	<!--Contact Form-->
+	<h3>Contact Form</h3>
+
+	<div class="container">
+	  <form action="/action_page.php">
+	    <label for="name">Name</label>
+	    <input type="text" id="name" name="name" placeholder="Your name..">
+
+	    <label for="email">Email</label>
+	    <input type="text" id="email" name="email" placeholder="Your email..">
+
+	    <label for="message">Message</label>
+	    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+	    <input type="submit" value="Submit">
+	  </form>
+	</div>
+
+	<!--Social Media Buttons-->
+	<div class="nav-center">
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="#" class="fa fa-facebook"></a>
+	</div>
+
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src='rainyday.js'></script>
+	<script src="jquery-3.2.1.min.js"></script>
+    
+    <script type="text/javascript">
+    	// A $( document ).ready() block.
+		$(document).ready(function() {
+		  var image = document.getElementById("rainyday-image");
+		  image.onload = function() {
+		    var engine = new RainyDay({
+		      image: image, // Image element
+		      // This value is required
+		      blur: 10, // Defines blur due to rain effect
+		      // Assuming 10 if not provided
+		      // Use 0 value to disable the blur
+		      opacity: 1 // Opacity of rain drops
+		      // Assuming 1 if not provided
+		    });
+		    engine.rain(
+		      [
+		        [1, 0, 20], // add 20 drops of size 1...
+		        [3, 3, 1] // ... and 1 drop of size from 3 - 6 ...
+		      ],
+		      100
+		    ); // ... every 100ms
+		  };
+		});
+		
+    </script>
+
+</body>
+</html>
