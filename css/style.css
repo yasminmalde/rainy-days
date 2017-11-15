@@ -5,12 +5,6 @@ html, body {margin:0; height: 100%;}
 	position: relative;	
 }
 
-#rainy-background {
-	max-width: 100%;
-	position: relative;	
-	text-align: center;
-}
-
 header {
 	text-align: center;
 }
@@ -18,12 +12,6 @@ header {
 h1 {
  	font-family: 'Barrio', cursive;
  	font-size: 75px;
- 	padding: 0 0 10px 0;
- 	position: absolute;
- 	top: 50px;
- 	left: 200px;
- 	width: 100%;
- 	color: #21618C;
  }
 
 a {
