@@ -5,6 +5,12 @@ html, body {margin:0; height: 100%;}
 	position: relative;	
 }
 
+#rainy-background {
+	max-width: 100%;
+	position: relative;	
+	text-align: center;
+}
+
 header {
 	text-align: center;
 }
@@ -17,6 +23,7 @@ h1 {
  	top: 50px;
  	left: 200px;
  	width: 100%;
+ 	color: #21618C;
  }
 
 a {
@@ -33,6 +40,13 @@ li {
 	font-size: 20px;
 	padding: 0 30px 0 30px;
 	font-family: 'Barrio', cursive;
+}
+
+.about {
+	text-align: justify;
+	margin: 10px;
+	padding-right: 30%;
+	padding-left: 30%;
 }
 
 a:hover {
