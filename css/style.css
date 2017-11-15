@@ -40,6 +40,10 @@ li {
 	padding-left: 30%;
 }
 
+p {
+	font-family: 'Barlow', sans-serif;
+}
+
 a:hover {
 	color: #ccf6ff;
 	text-decoration: none;
@@ -54,6 +58,7 @@ img.resize {
 	background-color: #f2fafc;
 	margin: 0 auto;
 	margin-top: 20px;
+	font-family: 'Barlow', sans-serif;
 }
 
 h2 {
@@ -120,7 +125,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-    background-color: #618791;
+    background-color: #335965;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -129,7 +134,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #618791;
 }
 
 .container {
